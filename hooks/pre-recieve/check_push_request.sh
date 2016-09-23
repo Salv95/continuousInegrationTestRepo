@@ -23,7 +23,7 @@ do
 
         # $? is a shell variable which stores the return code from what we just ran
 
-        rc = 1#rc=$?
+        rc = 0#rc=$?
         if [[ $rc != 0 ]] ; then
             # A non-zero return code means an error occurred, so tell the user and exit
             echo "phpunit failed on rev $newrev - push deniend. Run tests locally and confirm they pass before pushing"
