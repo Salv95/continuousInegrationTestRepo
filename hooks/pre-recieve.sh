@@ -10,16 +10,18 @@ do
 
         # Since the repo is bare, we need to put the actual files someplace,
         # so we use the temp dir we chose earlier
-        git archive $newrev | tar -x -C /home/jani/tmp/example
+        git archive $newrev | tar -x -C /Users/Shared/Jenkins/repos/tmp
 
         echo "Running phpunit for $newrev ... "
 
         # This part is the actual code which is used to run our tests
         # In my case, the phpunit testsuite resides in the tests directory, so go there
-#    cd /home/jani/tmp/example/tests
+       #   cd /home/jani/tmp/example/tests
 
         # And execute the testsuite, while ignoring any output
-        phpunit > /dev/null
+
+
+#phpunit > /dev/null
 
         # $? is a shell variable which stores the return code from what we just ran
 
